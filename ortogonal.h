@@ -52,6 +52,7 @@ struct Matriz
     void recorrerColumnas();
     void recorrerNiveles();
     Nodo * getFloor(int fila, int columna);
+    Nodo * getClosest(Nodo * floor, int nivel, int dir);
 };
 
 #endif // ORTOGONAL_H

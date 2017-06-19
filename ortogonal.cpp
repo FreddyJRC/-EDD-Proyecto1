@@ -99,6 +99,86 @@ Nodo * Matriz::getFloor(int fila, int columna)
     return NULL;
 }
 
+Nodo * Matriz::getClosest(Nodo *floor, int nivel, int dir)
+{
+    Nodo * actual = floor;
+    Nodo * tmp;
+    if(dir == 1)
+    {
+        actual = actual->derecha;
+        while (actual != NULL) {
+            tmp = actual;
+
+            while (tmp != NULL) {
+
+                if(tmp->nivel == nivel){
+                    return tmp;
+                }
+
+                tmp = tmp->enfrente;
+            }
+
+            actual = actual->derecha;
+        }
+    }
+    else if(dir == 2)
+    {
+        actual = actual->izquierda;
+        while (actual =! NULL) {
+            tmp = actual;
+
+            while (tmp != NULL) {
+
+                if(tmp->nivel == nivel) {
+                    return tmp;
+                }
+
+                tmp = tmp->enfrente;
+            }
+
+            actual = actual->izquierda;
+        }
+    }
+    else if(dir == 3)
+    {
+        actual = actual->arriba;
+        while (actual != NULL) {
+            tmp = actual;
+
+            while (tmp != NULL) {
+
+                if(tmp->nivel == nivel) {
+                    return tmp;
+                }
+
+                tmp = tmp->enfrente;
+            }
+
+            actual = actual->arriba;
+        }
+    }
+    else if(dir == 4)
+    {
+        actual = actual->abajo;
+        while (actual != NULL) {
+            tmp = actual;
+
+            while (tmp != NULL) {
+
+                if(tmp->nivel == nivel) {
+                    return tmp;
+                }
+
+                tmp = tmp->enfrente;
+            }
+
+            actual = actual->abajo;
+        }
+    }
+
+    return NULL;
+}
+
 Matriz::Matriz()
 {
     this->eFilas = new ListaEncabezados();
@@ -204,27 +284,31 @@ void Matriz::insertar(int nivel, int fila, int columna, char * valor)
             this->insertar(0, fila, columna, NULL);
             floor = this->getFloor(fila, columna);
         }
-        else
+
+        Nodo * actual = floor;
+        while (actual->enfrente != NULL)
         {
-            while (floor->enfrente != NULL)
+            if(nuevo->nivel < actual->enfrente->nivel) //Insercion en el medio
             {
-                if(nuevo->nivel < floor->enfrente->nivel) //Insercion en el medio
-                {
-                    nuevo->enfrente = floor->enfrente;
-                    floor->enfrente->atras = nuevo;
-                    nuevo->atras = floor;
-                    floor->enfrente = nuevo;
-                }
+                nuevo->enfrente = actual->enfrente;
+                actual->enfrente->atras = nuevo;
+                nuevo->atras = actual;
+                actual->enfrente = nuevo;
 
-                floor = floor->enfrente;
+                Nodo * tmp = this->getCloest(floor, nivel, 1);
+                nuevo->derecha = tmp;
+                if(tmp != NULL) tmp->izquierda = nuevo;
             }
 
-            if(floor->enfrente == NULL)
-            {
-                floor->enfrente = nuevo;
-                nuevo->atras = floor;
-            }
+            actual = actual->enfrente;
         }
+
+        if(actual->enfrente == NULL)
+        {
+            actual->enfrente = nuevo;
+            nuevo->atras = actual;
+        }
+
     }
 }
 
