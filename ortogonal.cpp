@@ -84,16 +84,18 @@ Encabezado * ListaEncabezados::getEncabezado(int id)
 Nodo * Matriz::getFloor(int fila, int columna)
 {
     Encabezado * eColumna = this->eColumnas->getEncabezado(columna);
-    Nodo * actual = eColumna->acceso;
+    if(eColumna != NULL){
+        Nodo * actual = eColumna->acceso;
 
-    while (actual != NULL) {
+        while (actual != NULL) {
 
-        if(actual->fila == fila)
-        {
-            return actual;
+            if(actual->fila == fila)
+            {
+                return actual;
+            }
+
+            actual = actual->abajo;
         }
-
-        actual = actual->abajo;
     }
 
     return NULL;
@@ -124,7 +126,7 @@ Nodo * Matriz::getClosest(Nodo *floor, int nivel, int dir)
     else if(dir == 2)
     {
         actual = actual->izquierda;
-        while (actual =! NULL) {
+        while (actual != NULL) {
             tmp = actual;
 
             while (tmp != NULL) {
@@ -295,9 +297,22 @@ void Matriz::insertar(int nivel, int fila, int columna, char * valor)
                 nuevo->atras = actual;
                 actual->enfrente = nuevo;
 
-                Nodo * tmp = this->getCloest(floor, nivel, 1);
+                Nodo * tmp = this->getClosest(floor, nivel, 1);
                 nuevo->derecha = tmp;
                 if(tmp != NULL) tmp->izquierda = nuevo;
+
+                tmp = this->getClosest(floor, nivel, 2);
+                nuevo->izquierda = tmp;
+                if(tmp != NULL) tmp->derecha = nuevo;
+
+                tmp = this->getClosest(floor, nivel, 3);
+                nuevo->arriba = tmp;
+                if(tmp != NULL) tmp->abajo = nuevo;
+
+                tmp = this->getClosest(floor, nivel, 4);
+                nuevo->abajo = tmp;
+                if(tmp != NULL) tmp->arriba = nuevo;
+                break;
             }
 
             actual = actual->enfrente;
@@ -307,6 +322,22 @@ void Matriz::insertar(int nivel, int fila, int columna, char * valor)
         {
             actual->enfrente = nuevo;
             nuevo->atras = actual;
+
+            Nodo * tmp = this->getClosest(floor, nivel, 1);
+            nuevo->derecha = tmp;
+            if(tmp != NULL) tmp->izquierda = nuevo;
+
+            tmp = this->getClosest(floor, nivel, 2);
+            nuevo->izquierda = tmp;
+            if(tmp != NULL) tmp->derecha = nuevo;
+
+            tmp = this->getClosest(floor, nivel, 3);
+            nuevo->arriba = tmp;
+            if(tmp != NULL) tmp->abajo = nuevo;
+
+            tmp = this->getClosest(floor, nivel, 4);
+            nuevo->abajo = tmp;
+            if(tmp != NULL) tmp->arriba = nuevo;
         }
 
     }
