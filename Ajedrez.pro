@@ -26,11 +26,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    ortogonal.cpp
+    ortogonal.cpp \
+    arbol.cpp
 
 HEADERS += \
         mainwindow.h \
-    ortogonal.h
+    ortogonal.h \
+    arbol.h
 
 FORMS += \
         mainwindow.ui
