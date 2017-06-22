@@ -12,6 +12,7 @@ struct Nodo
     int columna;
     int nivel;
     char * valor;
+    int color;
     Nodo * derecha;
     Nodo * izquierda;
     Nodo * arriba;
@@ -19,7 +20,7 @@ struct Nodo
     Nodo * enfrente;
     Nodo * atras;
 
-    Nodo(int nivel, int fila, int columna, char * valor);
+    Nodo(int nivel, int fila, int columna, char * valor, int color);
 };
 
 struct Encabezado
@@ -47,7 +48,7 @@ struct Matriz
     ListaEncabezados * eNiveles;
 
     Matriz();
-    void insertar(int nivel, int fila, int columna, char * valor);
+    void insertar(int nivel, int fila, int columna, char * valor, int color);
     void recorrerFilas();
     void recorrerColumnas();
     void recorrerNiveles();

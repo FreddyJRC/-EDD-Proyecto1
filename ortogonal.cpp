@@ -3,11 +3,12 @@
 #include <iostream>
 using namespace std;
 
-Nodo::Nodo(int nivel, int fila, int columna, char * valor)
+Nodo::Nodo(int nivel, int fila, int columna, char * valor, int color)
 {
     this->nivel = nivel;
     this->fila = fila;
     this->columna = columna;
+    this->color = color;
     this->valor = valor;
     this->abajo = NULL;
     this->arriba = NULL;
@@ -186,11 +187,80 @@ Matriz::Matriz()
     this->eFilas = new ListaEncabezados();
     this->eColumnas = new ListaEncabezados();
     this->eNiveles = new ListaEncabezados();
+
+    this->insertar(0, 1, 1, "C", 0);
+    this->insertar(0, 1, 2, "A", 0);
+    this->insertar(0, 1, 3, "T", 0);
+    this->insertar(0, 1, 4, "D", 0);
+    this->insertar(0, 1, 5, "R", 0);
+    this->insertar(0, 1, 6, "T", 0);
+    this->insertar(0, 1, 7, "A", 0);
+    this->insertar(0, 1, 8, "C", 0);
+
+    this->insertar(0, 2, 1, "P", 0);
+    this->insertar(0, 2, 2, "P", 0);
+    this->insertar(0, 2, 3, "P", 0);
+    this->insertar(0, 2, 4, "P", 0);
+    this->insertar(0, 2, 5, "P", 0);
+    this->insertar(0, 2, 6, "P", 0);
+    this->insertar(0, 2, 7, "P", 0);
+    this->insertar(0, 2, 8, "P", 0);
+
+    this->insertar(0, 7, 1, "P", 1);
+    this->insertar(0, 7, 2, "P", 1);
+    this->insertar(0, 7, 3, "P", 1);
+    this->insertar(0, 7, 4, "P", 1);
+    this->insertar(0, 7, 5, "P", 1);
+    this->insertar(0, 7, 6, "P", 1);
+    this->insertar(0, 7, 7, "P", 1);
+    this->insertar(0, 7, 8, "P", 1);
+
+    this->insertar(0, 8, 1, "C", 1);
+    this->insertar(0, 8, 2, "A", 1);
+    this->insertar(0, 8, 3, "T", 1);
+    this->insertar(0, 8, 4, "D", 1);
+    this->insertar(0, 8, 5, "R", 1);
+    this->insertar(0, 8, 6, "T", 1);
+    this->insertar(0, 8, 7, "A", 1);
+    this->insertar(0, 8, 8, "C", 1);
+
+    this->insertar(1, 1, 6, "T", 0);
+    this->insertar(1, 1, 7, "A", 0);
+    this->insertar(1, 1, 8, "C", 0);
+
+    this->insertar(1, 2, 6, "P", 0);
+    this->insertar(1, 2, 7, "P", 0);
+    this->insertar(1, 2, 8, "P", 0);
+
+    this->insertar(1, 7, 1, "P", 1);
+    this->insertar(1, 7, 2, "P", 1);
+    this->insertar(1, 7, 3, "P", 1);
+
+    this->insertar(1, 8, 1, "C", 1);
+    this->insertar(1, 8, 2, "A", 1);
+    this->insertar(1, 8, 3, "T", 1);
+
+    this->insertar(2, 1, 1, "C", 0);
+    this->insertar(2, 1, 2, "A", 0);
+    this->insertar(2, 1, 3, "T", 0);
+
+    this->insertar(2, 2, 1, "P", 0);
+    this->insertar(2, 2, 2, "P", 0);
+    this->insertar(2, 2, 3, "P", 0);
+
+    this->insertar(2, 7, 6, "P", 1);
+    this->insertar(2, 7, 7, "P", 1);
+    this->insertar(2, 7, 8, "P", 1);
+
+    this->insertar(2, 8, 6, "T", 1);
+    this->insertar(2, 8, 7, "A", 1);
+    this->insertar(2, 8, 8, "C", 1);
+
 }
 
-void Matriz::insertar(int nivel, int fila, int columna, char * valor)
+void Matriz::insertar(int nivel, int fila, int columna, char * valor, int color)
 {
-    Nodo * nuevo = new Nodo(nivel, fila, columna, valor);
+    Nodo * nuevo = new Nodo(nivel, fila, columna, valor, color);
 
     if(nivel == 0)
     {
@@ -283,7 +353,7 @@ void Matriz::insertar(int nivel, int fila, int columna, char * valor)
         Nodo * floor = this->getFloor(fila, columna);
         if(floor == NULL) //Insercion al inicio
         {
-            this->insertar(0, fila, columna, NULL);
+            this->insertar(0, fila, columna, "", 0);
             floor = this->getFloor(fila, columna);
         }
 
