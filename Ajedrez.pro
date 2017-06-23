@@ -27,12 +27,14 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     ortogonal.cpp \
-    arbol.cpp
+    arbol.cpp \
+    backend.cpp
 
 HEADERS += \
         mainwindow.h \
     ortogonal.h \
-    arbol.h
+    arbol.h \
+    backend.h
 
 FORMS += \
         mainwindow.ui

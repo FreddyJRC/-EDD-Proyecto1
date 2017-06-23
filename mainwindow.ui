@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>939</width>
-    <height>613</height>
+    <width>1137</width>
+    <height>720</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,8 +19,8 @@
      <rect>
       <x>20</x>
       <y>270</y>
-      <width>281</width>
-      <height>271</height>
+      <width>371</width>
+      <height>351</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
@@ -145,6 +145,12 @@
      </item>
      <item row="1" column="1">
       <widget class="QLabel" name="label_18">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -155,6 +161,12 @@
      </item>
      <item row="1" column="2">
       <widget class="QLabel" name="label_19">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -165,6 +177,12 @@
      </item>
      <item row="1" column="3">
       <widget class="QLabel" name="label_20">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -175,6 +193,12 @@
      </item>
      <item row="1" column="4">
       <widget class="QLabel" name="label_21">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -185,6 +209,12 @@
      </item>
      <item row="1" column="5">
       <widget class="QLabel" name="label_22">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -195,6 +225,12 @@
      </item>
      <item row="1" column="6">
       <widget class="QLabel" name="label_23">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -205,6 +241,12 @@
      </item>
      <item row="1" column="7">
       <widget class="QLabel" name="label_24">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -215,6 +257,12 @@
      </item>
      <item row="1" column="8">
       <widget class="QLabel" name="label_25">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -225,6 +273,12 @@
      </item>
      <item row="2" column="1">
       <widget class="QLabel" name="label_26">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -235,6 +289,12 @@
      </item>
      <item row="2" column="2">
       <widget class="QLabel" name="label_27">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -245,6 +305,12 @@
      </item>
      <item row="2" column="3">
       <widget class="QLabel" name="label_28">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -255,6 +321,12 @@
      </item>
      <item row="2" column="4">
       <widget class="QLabel" name="label_29">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -265,6 +337,12 @@
      </item>
      <item row="2" column="5">
       <widget class="QLabel" name="label_30">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -275,6 +353,12 @@
      </item>
      <item row="2" column="6">
       <widget class="QLabel" name="label_31">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -285,6 +369,12 @@
      </item>
      <item row="2" column="7">
       <widget class="QLabel" name="label_32">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -295,6 +385,12 @@
      </item>
      <item row="2" column="8">
       <widget class="QLabel" name="label_33">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -305,6 +401,12 @@
      </item>
      <item row="3" column="1">
       <widget class="QLabel" name="label_34">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -315,6 +417,12 @@
      </item>
      <item row="3" column="2">
       <widget class="QLabel" name="label_35">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -325,6 +433,12 @@
      </item>
      <item row="3" column="3">
       <widget class="QLabel" name="label_36">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -335,6 +449,12 @@
      </item>
      <item row="3" column="4">
       <widget class="QLabel" name="label_37">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -345,6 +465,12 @@
      </item>
      <item row="3" column="5">
       <widget class="QLabel" name="label_38">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -355,6 +481,12 @@
      </item>
      <item row="3" column="6">
       <widget class="QLabel" name="label_39">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -365,6 +497,12 @@
      </item>
      <item row="3" column="7">
       <widget class="QLabel" name="label_40">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -375,6 +513,12 @@
      </item>
      <item row="3" column="8">
       <widget class="QLabel" name="label_41">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -385,6 +529,12 @@
      </item>
      <item row="4" column="1">
       <widget class="QLabel" name="label_42">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -395,6 +545,12 @@
      </item>
      <item row="4" column="2">
       <widget class="QLabel" name="label_43">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -405,6 +561,12 @@
      </item>
      <item row="4" column="3">
       <widget class="QLabel" name="label_44">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -415,6 +577,12 @@
      </item>
      <item row="4" column="4">
       <widget class="QLabel" name="label_45">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -425,6 +593,12 @@
      </item>
      <item row="4" column="5">
       <widget class="QLabel" name="label_46">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -435,6 +609,12 @@
      </item>
      <item row="4" column="6">
       <widget class="QLabel" name="label_47">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -445,6 +625,12 @@
      </item>
      <item row="4" column="7">
       <widget class="QLabel" name="label_48">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -455,6 +641,12 @@
      </item>
      <item row="4" column="8">
       <widget class="QLabel" name="label_49">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -465,6 +657,12 @@
      </item>
      <item row="5" column="1">
       <widget class="QLabel" name="label_50">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -475,6 +673,12 @@
      </item>
      <item row="5" column="2">
       <widget class="QLabel" name="label_51">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -485,6 +689,12 @@
      </item>
      <item row="5" column="3">
       <widget class="QLabel" name="label_52">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -495,6 +705,12 @@
      </item>
      <item row="5" column="4">
       <widget class="QLabel" name="label_53">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -505,6 +721,12 @@
      </item>
      <item row="5" column="5">
       <widget class="QLabel" name="label_54">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -515,6 +737,12 @@
      </item>
      <item row="5" column="6">
       <widget class="QLabel" name="label_55">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -525,6 +753,12 @@
      </item>
      <item row="5" column="7">
       <widget class="QLabel" name="label_56">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -535,6 +769,12 @@
      </item>
      <item row="5" column="8">
       <widget class="QLabel" name="label_57">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -545,6 +785,12 @@
      </item>
      <item row="6" column="1">
       <widget class="QLabel" name="label_58">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -555,6 +801,12 @@
      </item>
      <item row="6" column="2">
       <widget class="QLabel" name="label_59">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -565,6 +817,12 @@
      </item>
      <item row="6" column="3">
       <widget class="QLabel" name="label_60">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -575,6 +833,12 @@
      </item>
      <item row="6" column="4">
       <widget class="QLabel" name="label_61">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -585,6 +849,12 @@
      </item>
      <item row="6" column="5">
       <widget class="QLabel" name="label_62">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -595,6 +865,12 @@
      </item>
      <item row="6" column="6">
       <widget class="QLabel" name="label_63">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -605,6 +881,12 @@
      </item>
      <item row="6" column="7">
       <widget class="QLabel" name="label_64">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -615,6 +897,12 @@
      </item>
      <item row="6" column="8">
       <widget class="QLabel" name="label_65">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -625,6 +913,12 @@
      </item>
      <item row="7" column="1">
       <widget class="QLabel" name="label_66">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -635,6 +929,12 @@
      </item>
      <item row="7" column="2">
       <widget class="QLabel" name="label_67">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -645,6 +945,12 @@
      </item>
      <item row="7" column="3">
       <widget class="QLabel" name="label_68">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -655,6 +961,12 @@
      </item>
      <item row="7" column="4">
       <widget class="QLabel" name="label_69">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -665,6 +977,12 @@
      </item>
      <item row="7" column="5">
       <widget class="QLabel" name="label_70">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -675,6 +993,12 @@
      </item>
      <item row="7" column="6">
       <widget class="QLabel" name="label_71">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -685,6 +1009,12 @@
      </item>
      <item row="7" column="7">
       <widget class="QLabel" name="label_72">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -695,6 +1025,12 @@
      </item>
      <item row="7" column="8">
       <widget class="QLabel" name="label_73">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -705,6 +1041,12 @@
      </item>
      <item row="8" column="1">
       <widget class="QLabel" name="label_74">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -715,6 +1057,12 @@
      </item>
      <item row="8" column="2">
       <widget class="QLabel" name="label_75">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -725,6 +1073,12 @@
      </item>
      <item row="8" column="3">
       <widget class="QLabel" name="label_76">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -735,6 +1089,12 @@
      </item>
      <item row="8" column="4">
       <widget class="QLabel" name="label_77">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -745,6 +1105,12 @@
      </item>
      <item row="8" column="5">
       <widget class="QLabel" name="label_78">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -755,6 +1121,12 @@
      </item>
      <item row="8" column="6">
       <widget class="QLabel" name="label_79">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -765,6 +1137,12 @@
      </item>
      <item row="8" column="7">
       <widget class="QLabel" name="label_80">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -775,6 +1153,12 @@
      </item>
      <item row="8" column="8">
       <widget class="QLabel" name="label_81">
+       <property name="maximumSize">
+        <size>
+         <width>36</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -788,10 +1172,10 @@
    <widget class="QWidget" name="gridLayoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>330</x>
+      <x>410</x>
       <y>270</y>
-      <width>281</width>
-      <height>271</height>
+      <width>341</width>
+      <height>351</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout_2">
@@ -916,6 +1300,12 @@
      </item>
      <item row="1" column="1">
       <widget class="QLabel" name="label_99">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -926,6 +1316,12 @@
      </item>
      <item row="1" column="2">
       <widget class="QLabel" name="label_100">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -936,6 +1332,12 @@
      </item>
      <item row="1" column="3">
       <widget class="QLabel" name="label_101">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -946,6 +1348,12 @@
      </item>
      <item row="1" column="4">
       <widget class="QLabel" name="label_102">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -956,6 +1364,12 @@
      </item>
      <item row="1" column="5">
       <widget class="QLabel" name="label_103">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -966,6 +1380,12 @@
      </item>
      <item row="1" column="6">
       <widget class="QLabel" name="label_104">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -976,6 +1396,12 @@
      </item>
      <item row="1" column="7">
       <widget class="QLabel" name="label_105">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -986,6 +1412,12 @@
      </item>
      <item row="1" column="8">
       <widget class="QLabel" name="label_106">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -996,6 +1428,12 @@
      </item>
      <item row="2" column="1">
       <widget class="QLabel" name="label_107">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1006,6 +1444,12 @@
      </item>
      <item row="2" column="2">
       <widget class="QLabel" name="label_108">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1016,6 +1460,12 @@
      </item>
      <item row="2" column="3">
       <widget class="QLabel" name="label_109">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1026,6 +1476,12 @@
      </item>
      <item row="2" column="4">
       <widget class="QLabel" name="label_110">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1036,6 +1492,12 @@
      </item>
      <item row="2" column="5">
       <widget class="QLabel" name="label_111">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1046,6 +1508,12 @@
      </item>
      <item row="2" column="6">
       <widget class="QLabel" name="label_112">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1056,6 +1524,12 @@
      </item>
      <item row="2" column="7">
       <widget class="QLabel" name="label_113">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1066,6 +1540,12 @@
      </item>
      <item row="2" column="8">
       <widget class="QLabel" name="label_114">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1076,6 +1556,12 @@
      </item>
      <item row="3" column="1">
       <widget class="QLabel" name="label_115">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1086,6 +1572,12 @@
      </item>
      <item row="3" column="2">
       <widget class="QLabel" name="label_116">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1096,6 +1588,12 @@
      </item>
      <item row="3" column="3">
       <widget class="QLabel" name="label_117">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1106,6 +1604,12 @@
      </item>
      <item row="3" column="4">
       <widget class="QLabel" name="label_118">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1116,6 +1620,12 @@
      </item>
      <item row="3" column="5">
       <widget class="QLabel" name="label_119">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1126,6 +1636,12 @@
      </item>
      <item row="3" column="6">
       <widget class="QLabel" name="label_120">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1136,6 +1652,12 @@
      </item>
      <item row="3" column="7">
       <widget class="QLabel" name="label_121">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1146,6 +1668,12 @@
      </item>
      <item row="3" column="8">
       <widget class="QLabel" name="label_122">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1156,6 +1684,12 @@
      </item>
      <item row="4" column="1">
       <widget class="QLabel" name="label_123">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1166,6 +1700,12 @@
      </item>
      <item row="4" column="2">
       <widget class="QLabel" name="label_124">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1176,6 +1716,12 @@
      </item>
      <item row="4" column="3">
       <widget class="QLabel" name="label_125">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1186,6 +1732,12 @@
      </item>
      <item row="4" column="4">
       <widget class="QLabel" name="label_126">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1196,6 +1748,12 @@
      </item>
      <item row="4" column="5">
       <widget class="QLabel" name="label_127">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1206,6 +1764,12 @@
      </item>
      <item row="4" column="6">
       <widget class="QLabel" name="label_128">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1216,6 +1780,12 @@
      </item>
      <item row="4" column="7">
       <widget class="QLabel" name="label_129">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1226,6 +1796,12 @@
      </item>
      <item row="4" column="8">
       <widget class="QLabel" name="label_130">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1236,6 +1812,12 @@
      </item>
      <item row="5" column="1">
       <widget class="QLabel" name="label_131">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1246,6 +1828,12 @@
      </item>
      <item row="5" column="2">
       <widget class="QLabel" name="label_132">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1256,6 +1844,12 @@
      </item>
      <item row="5" column="3">
       <widget class="QLabel" name="label_133">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1266,6 +1860,12 @@
      </item>
      <item row="5" column="4">
       <widget class="QLabel" name="label_134">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1276,6 +1876,12 @@
      </item>
      <item row="5" column="5">
       <widget class="QLabel" name="label_135">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1286,6 +1892,12 @@
      </item>
      <item row="5" column="6">
       <widget class="QLabel" name="label_136">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1296,6 +1908,12 @@
      </item>
      <item row="5" column="7">
       <widget class="QLabel" name="label_137">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1306,6 +1924,12 @@
      </item>
      <item row="5" column="8">
       <widget class="QLabel" name="label_138">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1316,6 +1940,12 @@
      </item>
      <item row="6" column="1">
       <widget class="QLabel" name="label_139">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1326,6 +1956,12 @@
      </item>
      <item row="6" column="2">
       <widget class="QLabel" name="label_140">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1336,6 +1972,12 @@
      </item>
      <item row="6" column="3">
       <widget class="QLabel" name="label_141">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1346,6 +1988,12 @@
      </item>
      <item row="6" column="4">
       <widget class="QLabel" name="label_142">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1356,6 +2004,12 @@
      </item>
      <item row="6" column="5">
       <widget class="QLabel" name="label_143">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1366,6 +2020,12 @@
      </item>
      <item row="6" column="6">
       <widget class="QLabel" name="label_144">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1376,6 +2036,12 @@
      </item>
      <item row="6" column="7">
       <widget class="QLabel" name="label_145">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1386,6 +2052,12 @@
      </item>
      <item row="6" column="8">
       <widget class="QLabel" name="label_146">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1396,6 +2068,12 @@
      </item>
      <item row="7" column="1">
       <widget class="QLabel" name="label_147">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1406,6 +2084,12 @@
      </item>
      <item row="7" column="2">
       <widget class="QLabel" name="label_148">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1416,6 +2100,12 @@
      </item>
      <item row="7" column="3">
       <widget class="QLabel" name="label_149">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1426,6 +2116,12 @@
      </item>
      <item row="7" column="4">
       <widget class="QLabel" name="label_150">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1436,6 +2132,12 @@
      </item>
      <item row="7" column="5">
       <widget class="QLabel" name="label_151">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1446,6 +2148,12 @@
      </item>
      <item row="7" column="6">
       <widget class="QLabel" name="label_152">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1456,6 +2164,12 @@
      </item>
      <item row="7" column="7">
       <widget class="QLabel" name="label_153">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1466,6 +2180,12 @@
      </item>
      <item row="7" column="8">
       <widget class="QLabel" name="label_154">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1476,6 +2196,12 @@
      </item>
      <item row="8" column="1">
       <widget class="QLabel" name="label_155">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1486,6 +2212,12 @@
      </item>
      <item row="8" column="2">
       <widget class="QLabel" name="label_156">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1496,6 +2228,12 @@
      </item>
      <item row="8" column="3">
       <widget class="QLabel" name="label_157">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1506,6 +2244,12 @@
      </item>
      <item row="8" column="4">
       <widget class="QLabel" name="label_158">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1516,6 +2260,12 @@
      </item>
      <item row="8" column="5">
       <widget class="QLabel" name="label_159">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1526,6 +2276,12 @@
      </item>
      <item row="8" column="6">
       <widget class="QLabel" name="label_160">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1536,6 +2292,12 @@
      </item>
      <item row="8" column="7">
       <widget class="QLabel" name="label_161">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1546,6 +2308,12 @@
      </item>
      <item row="8" column="8">
       <widget class="QLabel" name="label_162">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>34</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1559,10 +2327,10 @@
    <widget class="QWidget" name="gridLayoutWidget_3">
     <property name="geometry">
      <rect>
-      <x>640</x>
+      <x>770</x>
       <y>270</y>
-      <width>281</width>
-      <height>271</height>
+      <width>341</width>
+      <height>351</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout_3">
@@ -1687,6 +2455,12 @@
      </item>
      <item row="1" column="1">
       <widget class="QLabel" name="label_180">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1697,6 +2471,12 @@
      </item>
      <item row="1" column="2">
       <widget class="QLabel" name="label_181">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1707,6 +2487,12 @@
      </item>
      <item row="1" column="3">
       <widget class="QLabel" name="label_182">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1717,6 +2503,12 @@
      </item>
      <item row="1" column="4">
       <widget class="QLabel" name="label_183">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1727,6 +2519,12 @@
      </item>
      <item row="1" column="5">
       <widget class="QLabel" name="label_184">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1737,6 +2535,12 @@
      </item>
      <item row="1" column="6">
       <widget class="QLabel" name="label_185">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1747,6 +2551,12 @@
      </item>
      <item row="1" column="7">
       <widget class="QLabel" name="label_186">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1757,6 +2567,12 @@
      </item>
      <item row="1" column="8">
       <widget class="QLabel" name="label_187">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1767,6 +2583,12 @@
      </item>
      <item row="2" column="1">
       <widget class="QLabel" name="label_188">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1777,6 +2599,12 @@
      </item>
      <item row="2" column="2">
       <widget class="QLabel" name="label_189">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1787,6 +2615,12 @@
      </item>
      <item row="2" column="3">
       <widget class="QLabel" name="label_190">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1797,6 +2631,12 @@
      </item>
      <item row="2" column="4">
       <widget class="QLabel" name="label_191">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1807,6 +2647,12 @@
      </item>
      <item row="2" column="5">
       <widget class="QLabel" name="label_192">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1817,6 +2663,12 @@
      </item>
      <item row="2" column="6">
       <widget class="QLabel" name="label_193">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1827,6 +2679,12 @@
      </item>
      <item row="2" column="7">
       <widget class="QLabel" name="label_194">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1837,6 +2695,12 @@
      </item>
      <item row="2" column="8">
       <widget class="QLabel" name="label_195">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1847,6 +2711,12 @@
      </item>
      <item row="3" column="1">
       <widget class="QLabel" name="label_196">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1857,6 +2727,12 @@
      </item>
      <item row="3" column="2">
       <widget class="QLabel" name="label_197">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1867,6 +2743,12 @@
      </item>
      <item row="3" column="3">
       <widget class="QLabel" name="label_198">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1877,6 +2759,12 @@
      </item>
      <item row="3" column="4">
       <widget class="QLabel" name="label_199">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1887,6 +2775,12 @@
      </item>
      <item row="3" column="5">
       <widget class="QLabel" name="label_200">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1897,6 +2791,12 @@
      </item>
      <item row="3" column="6">
       <widget class="QLabel" name="label_201">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1907,6 +2807,12 @@
      </item>
      <item row="3" column="7">
       <widget class="QLabel" name="label_202">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1917,6 +2823,12 @@
      </item>
      <item row="3" column="8">
       <widget class="QLabel" name="label_203">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1927,6 +2839,12 @@
      </item>
      <item row="4" column="1">
       <widget class="QLabel" name="label_204">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1937,6 +2855,12 @@
      </item>
      <item row="4" column="2">
       <widget class="QLabel" name="label_205">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1947,6 +2871,12 @@
      </item>
      <item row="4" column="3">
       <widget class="QLabel" name="label_206">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1957,6 +2887,12 @@
      </item>
      <item row="4" column="4">
       <widget class="QLabel" name="label_207">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1967,6 +2903,12 @@
      </item>
      <item row="4" column="5">
       <widget class="QLabel" name="label_208">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1977,6 +2919,12 @@
      </item>
      <item row="4" column="6">
       <widget class="QLabel" name="label_209">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -1987,6 +2935,12 @@
      </item>
      <item row="4" column="7">
       <widget class="QLabel" name="label_210">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -1997,6 +2951,12 @@
      </item>
      <item row="4" column="8">
       <widget class="QLabel" name="label_211">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -2007,6 +2967,12 @@
      </item>
      <item row="5" column="1">
       <widget class="QLabel" name="label_212">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -2017,6 +2983,12 @@
      </item>
      <item row="5" column="2">
       <widget class="QLabel" name="label_213">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -2027,6 +2999,12 @@
      </item>
      <item row="5" column="3">
       <widget class="QLabel" name="label_214">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -2037,6 +3015,12 @@
      </item>
      <item row="5" column="4">
       <widget class="QLabel" name="label_215">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -2047,6 +3031,12 @@
      </item>
      <item row="5" column="5">
       <widget class="QLabel" name="label_216">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -2057,6 +3047,12 @@
      </item>
      <item row="5" column="6">
       <widget class="QLabel" name="label_217">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -2067,6 +3063,12 @@
      </item>
      <item row="5" column="7">
       <widget class="QLabel" name="label_218">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -2077,6 +3079,12 @@
      </item>
      <item row="5" column="8">
       <widget class="QLabel" name="label_219">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -2087,6 +3095,12 @@
      </item>
      <item row="6" column="1">
       <widget class="QLabel" name="label_220">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -2097,6 +3111,12 @@
      </item>
      <item row="6" column="2">
       <widget class="QLabel" name="label_221">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -2107,6 +3127,12 @@
      </item>
      <item row="6" column="3">
       <widget class="QLabel" name="label_222">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -2117,6 +3143,12 @@
      </item>
      <item row="6" column="4">
       <widget class="QLabel" name="label_223">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -2127,6 +3159,12 @@
      </item>
      <item row="6" column="5">
       <widget class="QLabel" name="label_224">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -2137,6 +3175,12 @@
      </item>
      <item row="6" column="6">
       <widget class="QLabel" name="label_225">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -2147,6 +3191,12 @@
      </item>
      <item row="6" column="7">
       <widget class="QLabel" name="label_226">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -2157,6 +3207,12 @@
      </item>
      <item row="6" column="8">
       <widget class="QLabel" name="label_227">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -2167,6 +3223,12 @@
      </item>
      <item row="7" column="1">
       <widget class="QLabel" name="label_228">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -2177,6 +3239,12 @@
      </item>
      <item row="7" column="2">
       <widget class="QLabel" name="label_229">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -2187,6 +3255,12 @@
      </item>
      <item row="7" column="3">
       <widget class="QLabel" name="label_230">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -2197,6 +3271,12 @@
      </item>
      <item row="7" column="4">
       <widget class="QLabel" name="label_231">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -2207,6 +3287,12 @@
      </item>
      <item row="7" column="5">
       <widget class="QLabel" name="label_232">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -2217,6 +3303,12 @@
      </item>
      <item row="7" column="6">
       <widget class="QLabel" name="label_233">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -2227,6 +3319,12 @@
      </item>
      <item row="7" column="7">
       <widget class="QLabel" name="label_234">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -2237,6 +3335,12 @@
      </item>
      <item row="7" column="8">
       <widget class="QLabel" name="label_235">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -2247,6 +3351,12 @@
      </item>
      <item row="8" column="1">
       <widget class="QLabel" name="label_236">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -2257,6 +3367,12 @@
      </item>
      <item row="8" column="2">
       <widget class="QLabel" name="label_237">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -2267,6 +3383,12 @@
      </item>
      <item row="8" column="3">
       <widget class="QLabel" name="label_238">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -2277,6 +3399,12 @@
      </item>
      <item row="8" column="4">
       <widget class="QLabel" name="label_239">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -2287,6 +3415,12 @@
      </item>
      <item row="8" column="5">
       <widget class="QLabel" name="label_240">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -2297,6 +3431,12 @@
      </item>
      <item row="8" column="6">
       <widget class="QLabel" name="label_241">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -2307,6 +3447,12 @@
      </item>
      <item row="8" column="7">
       <widget class="QLabel" name="label_242">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 87, 83);</string>
        </property>
@@ -2317,6 +3463,12 @@
      </item>
      <item row="8" column="8">
       <widget class="QLabel" name="label_243">
+       <property name="maximumSize">
+        <size>
+         <width>33</width>
+         <height>33</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(186, 189, 182);</string>
        </property>
@@ -2343,7 +3495,7 @@
    <widget class="QLabel" name="label_245">
     <property name="geometry">
      <rect>
-      <x>330</x>
+      <x>410</x>
       <y>250</y>
       <width>67</width>
       <height>17</height>
@@ -2356,7 +3508,7 @@
    <widget class="QLabel" name="label_246">
     <property name="geometry">
      <rect>
-      <x>640</x>
+      <x>770</x>
       <y>250</y>
       <width>67</width>
       <height>17</height>
@@ -2570,7 +3722,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>939</width>
+     <width>1137</width>
      <height>22</height>
     </rect>
    </property>
