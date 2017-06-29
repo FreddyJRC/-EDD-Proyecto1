@@ -1,6 +1,9 @@
 #include <ortogonal.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include <iostream>
+#include <vector>
+#include <string.h>
 using namespace std;
 
 Nodo::Nodo(int nivel, int fila, int columna, char * valor, int color)
@@ -10,12 +13,36 @@ Nodo::Nodo(int nivel, int fila, int columna, char * valor, int color)
     this->columna = columna;
     this->color = color;
     this->valor = valor;
+    this->isDrawable = true;
     this->abajo = NULL;
     this->arriba = NULL;
     this->derecha = NULL;
     this->izquierda = NULL;
     this->enfrente = NULL;
     this->atras = NULL;
+}
+
+Nodo* Nodo::hasMached()
+{
+    if(this->enfrente != NULL){
+        if(strcmp(this->enfrente->valor, this->valor) == 0){
+            return this->enfrente;
+        } else if(this->enfrente->enfrente != NULL){
+            if(strcmp(this->enfrente->enfrente->valor, this->valor) == 0){
+                return this->enfrente->enfrente;
+            }
+        }
+    } else if(this->atras != NULL){
+        if(strcmp(this->atras->valor, this->valor) == 0){
+            return this->atras;
+        } else if(this->atras->atras != NULL){
+            if(strcmp(this->atras->atras->valor, this->valor) == 0){
+                return this->atras->atras;
+            }
+        }
+    }
+
+    return NULL;
 }
 
 Encabezado::Encabezado(int id)
@@ -173,6 +200,35 @@ Nodo * Matriz::getClosest(Nodo *floor, int nivel, int dir)
                 }
 
                 tmp = tmp->enfrente;
+            }
+
+            actual = actual->abajo;
+        }
+    }
+
+    return NULL;
+}
+
+Nodo *Matriz::findNodo(int nivel, int fila, int columna)
+{
+    Encabezado * eColumna = this->eColumnas->getEncabezado(columna);
+    if(eColumna != NULL){
+        Nodo * actual = eColumna->acceso, *tmp;
+
+        while (actual != NULL) {
+
+            if(actual->fila == fila)
+            {
+                if(nivel == 0)
+                    return actual;
+                else{
+                    tmp = actual;
+                    while (tmp != NULL) {
+                        if(tmp->nivel == nivel)
+                            return tmp;
+                        tmp = tmp->enfrente;
+                    }
+                }
             }
 
             actual = actual->abajo;
@@ -355,6 +411,7 @@ void Matriz::insertar(int nivel, int fila, int columna, char * valor, int color)
         {
             this->insertar(0, fila, columna, "", 0);
             floor = this->getFloor(fila, columna);
+            floor->isDrawable = false;
         }
 
         Nodo * actual = floor;
@@ -413,6 +470,71 @@ void Matriz::insertar(int nivel, int fila, int columna, char * valor, int color)
     }
 }
 
+void Matriz::eliminar(Nodo *actual)
+{
+    if(actual->nivel == 0 && actual->enfrente != NULL){
+        actual->valor = "";
+        actual->color = 0;
+        actual->isDrawable = false;
+    } else {
+        if(actual->nivel == 0){
+            if(actual->derecha == NULL && actual->izquierda == NULL){
+                Encabezado *fila = this->eFilas->getEncabezado(actual->fila);
+
+                if(fila->anterior == NULL){
+                    this->eFilas->primero = fila->siguiente;
+                    fila->siguiente->anterior = NULL;
+                }else{
+                    fila->anterior->siguiente = fila->siguiente;
+                    if(fila->siguiente != NULL) fila->siguiente->anterior = fila->anterior;
+                }
+                free(fila);
+            }
+
+            if(actual->abajo == NULL && actual->arriba == NULL){
+                Encabezado * columna = this->eColumnas->getEncabezado(actual->columna);
+
+                if(columna->anterior == NULL){
+                    this->eColumnas->primero = columna->siguiente;
+                    columna->siguiente->anterior = NULL;
+                } else {
+                    columna->anterior->siguiente = columna->siguiente;
+                    if(columna->siguiente != NULL) columna->siguiente->anterior = columna->anterior;
+                }
+                free(columna);
+            }
+        }
+
+        if(actual->derecha != NULL)
+            actual->derecha->izquierda = actual->izquierda;
+
+        if(actual->izquierda != NULL)
+            actual->izquierda->derecha = actual->derecha;
+
+        if(actual->abajo != NULL)
+            actual->abajo->arriba = actual->arriba;
+
+        if(actual->arriba != NULL)
+            actual->arriba->abajo = actual->abajo;
+
+        if(actual->nivel != 0){
+            Nodo * floor = this->getFloor(actual->fila, actual->columna);
+
+            if(actual->atras == floor && !floor->isDrawable && actual->enfrente == NULL)
+                this->eliminar(floor);
+            else {
+                if(actual->atras != NULL)
+                    actual->atras->enfrente = actual->enfrente;
+            }
+        }
+
+        if(actual->enfrente != NULL)
+            actual->enfrente->atras = actual->atras;
+
+        free(actual);
+    }
+}
+
 void Matriz::recorrerFilas()
 {
     Encabezado * eFila = eFilas->primero;
@@ -466,29 +588,294 @@ void Matriz::recorrerColumnas()
     cout << endl;
 }
 
-void Matriz::recorrerNiveles()
+void Matriz::graficar(int nivel)
 {
-    Encabezado * eColumna = eColumnas->primero;
-    cout << "Recorrido por Columnas por niveles: " << endl;
+    FILE *fs = fopen("matriz.dot", "w+");
+    Encabezado *tmp;
+    fprintf(fs, "digraph G{ \n node[shape=box]; \n rankdir=UD; \n");
 
-        Nodo * actual = eColumna->acceso;
-        while(eColumna != NULL)
-        {
+    if(nivel == 0){
+        fprintf(fs, "{rank=min;\"matriz\";");
+        tmp = this->eColumnas->primero;
+        while (tmp != NULL){
+            fprintf(fs, "\"x%d\";", tmp->id);
+            tmp = tmp->siguiente;
+        }
+        fprintf(fs, "}; \n");
+    }
 
-            while(actual != NULL)
-            {
-                cout << actual->valor;
-
-                if(eColumna->siguiente != NULL || actual->abajo != NULL)
-                {
-                    cout << "->";
+    tmp = this->eFilas->primero;
+    while (tmp != NULL) {
+        (nivel == 0) ? fprintf(fs, "{rank=same;\"y%d\";", tmp->id) : fprintf(fs, "{");
+        Nodo * actual = tmp->acceso;
+        while (actual != NULL) {
+            if(nivel == 0){
+                if(actual->isDrawable) fprintf(fs, "\"pieza: %s \\n color: %d \\n xy: %d%d\";", actual->valor, actual->color, actual->columna, actual->fila);
+            }else{
+                Nodo *tmp1 = actual;
+                while (tmp1 != NULL) {
+                    if(tmp1->nivel == nivel) fprintf(fs, "\"pieza: %s \\n color: %d \\n xy: %d%d\";", tmp1->valor, tmp1->color, actual->columna, actual->fila);
+                    tmp1 = tmp1->enfrente;
                 }
+            }
+            actual = actual->derecha;
+        }
+        fprintf(fs, "}; \n");
+        tmp = tmp->siguiente;
+    }
 
+
+    tmp = this->eColumnas->primero;
+    while (tmp != NULL) {
+        Nodo * actual = tmp->acceso;
+
+        if(nivel == 0){
+            if(actual->isDrawable) fprintf(fs, "\"pieza: %s \\n color: %d \\n xy: %d%d\"", actual->valor, actual->color, actual->columna, actual->fila);
+        }else{
+            Nodo *tmp1 = actual;
+            while (tmp1 != NULL) {
+                if(tmp1->nivel == nivel) {
+                    fprintf(fs, "\"pieza: %s \\n color: %d \\n xy: %d%d\"", tmp1->valor, tmp1->color, actual->columna, actual->fila);
+                    break;
+                }
+                tmp1 = tmp1->enfrente;
+            }
+            if(tmp1 == NULL) fprintf(fs, "\" \"");
+        }
+        actual = actual->abajo;
+
+        while (actual != NULL) {
+            if(nivel == 0){
+                if(actual->isDrawable) fprintf(fs, " -> \"pieza: %s \\n color: %d \\n xy: %d%d\"", actual->valor, actual->color, actual->columna, actual->fila);
+            }else{
+                Nodo *tmp1 = actual;
+                while (tmp1 != NULL) {
+                    if(tmp1->nivel == nivel) fprintf(fs, " -> \"pieza: %s \\n color: %d \\n xy: %d%d\"", tmp1->valor, tmp1->color, actual->columna, actual->fila);
+                    tmp1 = tmp1->enfrente;
+                }
+            }
+            actual = actual->abajo;
+        }
+        fprintf(fs, "[dir=both]; \n");
+        tmp = tmp->siguiente;
+    }
+
+
+    if(nivel == 0) {
+        tmp = this->eColumnas->primero;
+        while (tmp != NULL) {
+            fprintf(fs, "\"x%d\"", tmp->id);
+            Nodo * actual = tmp->acceso;
+
+            while (actual != NULL) {
+                if(actual->isDrawable){
+                    fprintf(fs, "-> \"pieza: %s \\n color: %d \\n xy: %d%d\"; \n", actual->valor, actual->color, actual->columna, actual->fila);
+                    break;
+                }
                 actual = actual->abajo;
             }
-
-            eColumna = eColumna->siguiente;
+            tmp = tmp->siguiente;
         }
+    }
+
+
+    tmp = this->eFilas->primero;
+    while (tmp != NULL) {
+        Nodo * actual = tmp->acceso;
+
+        if(nivel == 0){
+            if(actual->isDrawable) fprintf(fs, "\"pieza: %s \\n color: %d \\n xy: %d%d\"", actual->valor, actual->color, actual->columna, actual->fila);
+        }else{
+            Nodo *tmp1 = actual;
+            while (tmp1 != NULL) {
+                if(tmp1->nivel == nivel){
+                    fprintf(fs, "\"pieza: %s \\n color: %d \\n xy: %d%d\"", tmp1->valor, tmp1->color, actual->columna, actual->fila);
+                    break;
+                }
+                tmp1 = tmp1->enfrente;
+            }
+            if(tmp1 == NULL) fprintf(fs, "\" \"");
+        }
+        actual = actual->derecha;
+
+        while (actual != NULL) {
+            if(nivel == 0){
+                if(actual->isDrawable) fprintf(fs, " -> \"pieza: %s \\n color: %d \\n xy: %d%d\"", actual->valor, actual->color, actual->columna, actual->fila);
+            }else{
+                Nodo *tmp1 = actual;
+                while (tmp1 != NULL) {
+                    if(tmp1->nivel == nivel) fprintf(fs, " -> \"pieza: %s \\n color: %d \\n xy: %d%d\"", tmp1->valor, tmp1->color, actual->columna, actual->fila);
+                    tmp1 = tmp1->enfrente;
+                }
+            }
+            actual = actual->derecha;
+        }
+        fprintf(fs, "[constraint=false, dir=both]; \n");
+        tmp = tmp->siguiente;
+    }
+
+
+    if(nivel == 0){
+        tmp = this->eFilas->primero;
+        while (tmp != NULL) {
+            fprintf(fs, "\"y%d\"", tmp->id);
+            Nodo * actual = tmp->acceso;
+
+            while (actual != NULL) {
+                if(actual->isDrawable){
+                    fprintf(fs, "-> \"pieza: %s \\n color: %d \\n xy: %d%d\"; \n", actual->valor, actual->color, actual->columna, actual->fila);
+                    break;
+                }
+                actual = actual->abajo;
+            }
+            tmp = tmp->siguiente;
+        }
+    }
+
+
+    if(nivel == 0){
+        tmp = this->eColumnas->primero;
+        fprintf(fs, "\"matriz\" -> \"x%d\" ", tmp->id);
+        while (tmp != NULL) {
+            fprintf(fs, "-> \"x%d\" ", tmp->id);
+            tmp = tmp->siguiente;
+        }
+        fprintf(fs, "; \n");
+
+        tmp = this->eFilas->primero;
+        fprintf(fs, "\"matriz\" -> \"y%d\" ", tmp->id);
+        while (tmp != NULL) {
+            fprintf(fs, "-> \"y%d\" ", tmp->id);
+            tmp = tmp->siguiente;
+        }
+        fprintf(fs, "[rankdir=UD]; \n");
+    }
+    fprintf(fs, "}");
+    fclose(fs);
+
+    system("dot -Tpng matriz.dot -o matriz.png");
+}
+
+void Matriz::mover(std::vector<std::string> move, int turn)
+{
+    int fila = idToInt(move[2][0]);
+    int columna = (move[2][1] - '0');
+    int nivel = stoi(move[1]);
+
+    Nodo *tmp, *tmp1, *objetivo, *floor;
+
+    if(move[0].compare("P") == 0){
+        objetivo = this->findNodo(nivel, fila, columna);
+        tmp = (turn == 0) ? findNodo(nivel, fila - 1, columna) : findNodo(nivel, fila + 1, columna);
+        if(tmp != NULL){
+            if(strcmp(tmp->valor, "P") == 0 && tmp->color == turn){
+                if(objetivo == NULL){
+                    this->eliminar(tmp);
+                    insertar(nivel, fila, columna, "P", turn);
+                    return;
+                }
+            }
+        } else {
+            if(objetivo != NULL && objetivo->color != turn){
+                tmp = (turn == 0) ? findNodo(nivel, fila +1, columna +1) : findNodo(nivel, fila -1, columna+1);
+                if(tmp == NULL) tmp = (turn == 0) ? findNodo(nivel, fila +1, columna -1) : findNodo(nivel, fila -1, columna -1);
+                if(tmp != NULL && strcmp(tmp->valor, "P") == 0 && tmp->color == turn) {
+                    objetivo->valor = tmp->valor;
+                    objetivo->color = tmp->color;
+                    this->eliminar(tmp);
+                    return;
+                }
+            } else {
+                tmp = (turn == 0) ? findNodo(nivel, fila -1, columna +1) : findNodo(nivel, fila +1, columna+1);
+                if(tmp == NULL) tmp = (turn == 0) ? findNodo(nivel, fila -1, columna -1) : findNodo(nivel, fila +1, columna -1);
+                if(tmp != NULL && strcmp(tmp->valor, "P") == 0 && tmp->color == turn) {
+                    bool posInicial = false;
+                    posInicial = ((tmp->color == 0) && (tmp->fila == 2)) ? true : false;
+                    posInicial = ((tmp->color == 1) && (tmp->fila == 7)) ? true : false;
+                    if(tmp->hasMached() != NULL && !posInicial){
+                        this->eliminar(tmp);
+                        insertar(nivel, fila, columna, "P", turn);
+                        return;
+                    }
+                }
+            }
+        }
+    } else if(move[0].compare("A") == 0) {
+        objetivo = this->findNodo(nivel, fila, columna);
+        if(objetivo == NULL){
+            this->insertar(nivel, fila, columna, "A", turn);
+            objetivo = this->findNodo(nivel, fila, columna);
+        }
+
+        if(nivel != 0) floor = this->getFloor(fila, columna);
+        else floor = objetivo;
+
+        tmp = this->getClosest(floor, nivel, 1);
+        if(tmp == NULL) tmp = this->getClosest(floor, nivel, 2);
+        if(tmp == NULL) tmp = this->getClosest(floor, nivel, 3);
+        if(tmp == NULL) tmp = this->getClosest(floor, nivel, 4);
+
+        if(tmp != NULL && strcmp(tmp->valor, "A") == 0 && tmp->color == turn){
+            if(objetivo->color == turn){
+                objetivo->valor = tmp->valor;
+                objetivo->color = tmp->color;
+                this->eliminar(tmp);
+                return;
+            }else{
+                this->eliminar(tmp);
+                return;
+            }
+        } else {
+            this->insertar(nivel, fila, columna, "A", turn);
+            objetivo = this->findNodo(nivel, columna, fila);
+            tmp = objetivo->hasMached();
+            if(tmp != NULL){
+                int i = 1;
+                while (tmp->fila - i > 0 || tmp->columna > 0) {
+                    tmp1 = this->findNodo(tmp->nivel, tmp->fila - i, tmp->columna - i);
+                    if(tmp1 != NULL && strcmp(tmp1->valor, "A") == 0 && tmp1->color == turn){
+                        this->eliminar(tmp);
+                        return;
+                    }
+                    ++i;
+                }
+                i = 1;
+                while (tmp->fila + i <= 8 || tmp->columna <= 8) {
+                    tmp1 = this->findNodo(tmp->nivel, tmp->fila + i, tmp->columna + i);
+                    if(tmp1 != NULL && strcmp(tmp1->valor, "A") == 0 && tmp1->color == turn){
+                        this->eliminar(tmp);
+                        return;
+                    }
+                    ++i;
+                }
+            } else {
+                this->eliminar(objetivo);
+                return;
+            }
+        }
+    }
 }
 
 
+
+int idToInt(char id)
+{
+    if(id == 'A')
+        return 8;
+    else if(id == 'B')
+        return 7;
+    else if(id == 'C')
+        return 6;
+    else if(id == 'D')
+        return 5;
+    else if(id == 'E')
+        return 4;
+    else if(id == 'F')
+        return 3;
+    else if(id == 'G')
+        return 2;
+    else if(id == 'H')
+        return 1;
+
+    return 0;
+}

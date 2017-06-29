@@ -5,10 +5,12 @@
 using namespace std;
 
 //*******CONSTRUCTORES*******
-Nodo::Nodo(char *info)
+aNodo::aNodo(char *info, int wins, int lost)
 {
     this->info = (char*)malloc(sizeof(char) * strlen(info));
     strcpy(this->info, info);
+    this->wins = wins;
+    this->lost = lost;
     this->izq = NULL;
     this->der = NULL;
 }
@@ -21,12 +23,12 @@ Arbol::Arbol()
 
 
 //*******BUSQUEDA*******
-Nodo * Arbol::buscar(char * info)
+aNodo * Arbol::buscar(char * info)
 {
     return buscar(this->raiz, info);
 }
 
-Nodo * Arbol::buscar(Nodo * actual, char *info)
+aNodo * Arbol::buscar(aNodo * actual, char *info)
 {
     if (actual == NULL)
     {
@@ -46,25 +48,25 @@ Nodo * Arbol::buscar(Nodo * actual, char *info)
 //*******FIN BUSQUEDA*******
 
 //*******INSERCION*******
-bool Arbol::insertar(char *info)
+bool Arbol::insertar(char *info, int wins, int lost)
 {
     if (buscar(info) == NULL)
     {
         if(raiz == NULL)
         {
-            raiz = new Nodo(info);
+            raiz = new aNodo(info, wins, lost);
             return true;
         }
         else
         {
-            return insertar(raiz, new Nodo(info));
+            return insertar(raiz, new aNodo(info, wins, lost));
         }
     }
 
     return false;
 }
 
-bool Arbol::insertar(Nodo * actual, Nodo * nuevo)
+bool Arbol::insertar(aNodo * actual, aNodo * nuevo)
 {
     if(strcmp(nuevo->info, actual->info) < 0)
     {
@@ -93,22 +95,68 @@ bool Arbol::insertar(Nodo * actual, Nodo * nuevo)
 }
 //*******FIN INSERCION*******
 
+//*******ELIMINAR*********
+void Arbol::eliminar(char *info){
+    this->eliminar(this->raiz, info);
+}
+
+aNodo * Arbol::eliminar(aNodo * actual, char *info){
+
+    if(actual == NULL) return actual;
+
+    if(strcmp(nuevo->info, actual->info) < 0){
+        actual->izq = eliminar(actual->izq, info);
+    } else if(strcmp(nuevo->info, actual->info) < 0){
+        actual->der = eliminar(actual->der, info);
+    } else {
+
+        if(actual->izq == NULL){
+            aNodo *tmp = actual->der;
+            free(actual);
+            return tmp;
+        } else if(actual->der == NULL){
+            aNodo *tmp = actual->izq;
+            free(actual);
+            return tmp;
+        } else {
+            aNodo *tmp = getMinimo(actual->der);
+            actual->info = tmp->info;
+            actual->der = eliminar(actual->der, tmp->info);
+        }
+
+    }
+    return actual;
+}
+
+aNodo * Arbol::getMinimo(aNodo * actual){
+    aNodo *tmp = actual;
+
+    while (tmp->izq != NULL) {
+        tmp = tmp->izq;
+    }
+    return tmp;
+}
+
 //*******RECORRIDOS*******
 void Arbol::preOrden()
 {
-    cout << endl;
-    cout << "*****Recorrido PreOrden*****" << endl;
-    preOrden(raiz);
-    cout << "*****Fin Recorrido PreOrden*****" << endl;
+    FILE *fs = fopen("arbol.dot", "w+");
+    fprintf(fs, "digraph G{ \n");
+    preOrden(fs, raiz);
+    fprintf(fs, "}");
+    fclose(fs);
+
+    system("dot -Tpng arbol.dot -o arbol.png");
 }
 
-void Arbol::preOrden(Nodo *actual)
+void Arbol::preOrden(FILE *fs, aNodo *actual)
 {
     if(actual != NULL)
     {
-        cout << actual->info << endl;
-        preOrden(actual->izq);
-        preOrden(actual->der);
+        if(actual->izq != NULL) fprintf(fs, "%s -> %s; \n", actual->info, actual->izq->info);
+        if(actual->der != NULL) fprintf(fs, "%s -> %s; \n", actual->info, actual->der->info);
+        preOrden(fs, actual->izq);
+        preOrden(fs, actual->der);
     }
 }
 
@@ -120,7 +168,7 @@ void Arbol::inOrden()
     cout << "*****Fin Recorrido InOrden*****" << endl;
 }
 
-void Arbol::inOrden(Nodo *actual)
+void Arbol::inOrden(aNodo *actual)
 {
     if(actual != NULL)
     {
@@ -138,7 +186,7 @@ void Arbol::postOrden()
     cout << "*****Fin Recorrido PostOrden*****" << endl;
 }
 
-void Arbol::postOrden(Nodo *actual)
+void Arbol::postOrden(aNodo *actual)
 {
     if(actual != NULL)
     {
@@ -162,7 +210,7 @@ int Arbol::calcularAltura()
     }
 }
 
-int Arbol::calcularAltura(Nodo * actual)
+int Arbol::calcularAltura(aNodo * actual)
 {
     if(actual == NULL)
     {
@@ -190,7 +238,7 @@ int Arbol::getNodosHoja()
     }
 }
 
-int Arbol::getNodosHoja(Nodo * actual)
+int Arbol::getNodosHoja(aNodo * actual)
 {
     if(actual == NULL)
     {

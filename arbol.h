@@ -1,33 +1,40 @@
 #ifndef ARBOL_H
 #define ARBOL_H
 
-struct Nodo
+#include <iostream>
+
+struct aNodo
 {
-    Nodo * izq;
-    Nodo * der;
+    aNodo * izq;
+    aNodo * der;
     char * info;
-    Nodo(char * info);
+    int wins;
+    int lost;
+    aNodo(char * info, int wins, int lost);
 };
 
 struct Arbol
 {
-    Nodo * raiz;
+    aNodo * raiz;
 
     Arbol();
-    Nodo * buscar(char * info);
-    Nodo * buscar(Nodo * actual, char * info);
-    bool insertar(char * info);
-    bool insertar(Nodo * actual, Nodo * nuevo);
+    aNodo * buscar(char * info);
+    aNodo * buscar(aNodo * actual, char * info);
+    aNodo * getMinimo(aNodo * actual);
+    bool insertar(char * info, int wins, int lost);
+    bool insertar(aNodo * actual, aNodo * nuevo);
+    void eliminar(char * info);
+    aNodo *eliminar(aNodo * actual, char * info);
     void preOrden();
-    void preOrden(Nodo * actual);
+    void preOrden(FILE *fs, aNodo * actual);
     void inOrden();
-    void inOrden(Nodo * actual);
+    void inOrden(aNodo * actual);
     void postOrden();
-    void postOrden(Nodo * actual);
+    void postOrden(aNodo * actual);
     int calcularAltura();
-    int calcularAltura(Nodo * actual);
+    int calcularAltura(aNodo * actual);
     int getNodosHoja();
-    int getNodosHoja(Nodo * actual);
+    int getNodosHoja(aNodo * actual);
 
 };
 

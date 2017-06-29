@@ -1,6 +1,9 @@
 #ifndef ORTOGONAL_H
 #define ORTOGONAL_H
 
+#include <vector>
+#include <string>
+
 typedef struct Nodo Nodo;
 typedef struct Encabezado Encabezado;
 typedef struct ListaEncabezados ListaEncabezados;
@@ -13,6 +16,7 @@ struct Nodo
     int nivel;
     char * valor;
     int color;
+    bool isDrawable;
     Nodo * derecha;
     Nodo * izquierda;
     Nodo * arriba;
@@ -21,6 +25,7 @@ struct Nodo
     Nodo * atras;
 
     Nodo(int nivel, int fila, int columna, char * valor, int color);
+    Nodo *hasMached();
 };
 
 struct Encabezado
@@ -49,11 +54,16 @@ struct Matriz
 
     Matriz();
     void insertar(int nivel, int fila, int columna, char * valor, int color);
+    void eliminar(Nodo * actual);
     void recorrerFilas();
     void recorrerColumnas();
-    void recorrerNiveles();
+    void graficar(int nivel);
+    void mover(std::vector<std::string> move, int turn);
     Nodo * getFloor(int fila, int columna);
     Nodo * getClosest(Nodo * floor, int nivel, int dir);
+    Nodo * findNodo(int nivel, int fila, int columna);
 };
+
+int idToInt(char id);
 
 #endif // ORTOGONAL_H

@@ -3489,7 +3489,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>NIVEL 1</string>
+     <string>NIVEL 0</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_245">
@@ -3502,7 +3502,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>NIVEL 2</string>
+     <string>NIVEL 1</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_246">
@@ -3515,7 +3515,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>NIVEL 3</string>
+     <string>NIVEL 2</string>
     </property>
    </widget>
    <widget class="QWidget" name="formLayoutWidget">
@@ -3551,7 +3551,7 @@
      <item row="2" column="0">
       <widget class="QLabel" name="label_247">
        <property name="text">
-        <string>Jugadoe Obscuras</string>
+        <string>Jugador Obscuras</string>
        </property>
       </widget>
      </item>
@@ -3570,6 +3570,9 @@
      </item>
      <item row="4" column="0" colspan="2">
       <widget class="QPushButton" name="pushButton">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="text">
         <string>Jugar</string>
        </property>
@@ -3593,7 +3596,7 @@
    <widget class="QLabel" name="label_250">
     <property name="geometry">
      <rect>
-      <x>330</x>
+      <x>310</x>
       <y>30</y>
       <width>67</width>
       <height>17</height>
@@ -3606,7 +3609,7 @@
    <widget class="QWidget" name="formLayoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>330</x>
+      <x>310</x>
       <y>60</y>
       <width>281</width>
       <height>161</height>
@@ -3649,10 +3652,17 @@
       </widget>
      </item>
      <item row="2" column="1">
-      <widget class="QLineEdit" name="lineEdit_4"/>
+      <widget class="QLineEdit" name="lineEdit_4">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+      </widget>
      </item>
      <item row="3" column="0" colspan="2">
       <widget class="QPushButton" name="pushButton_2">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="text">
         <string>Mover</string>
        </property>
@@ -3663,7 +3673,7 @@
    <widget class="QLabel" name="label_256">
     <property name="geometry">
      <rect>
-      <x>640</x>
+      <x>600</x>
       <y>30</y>
       <width>111</width>
       <height>17</height>
@@ -3676,9 +3686,9 @@
    <widget class="QWidget" name="formLayoutWidget_3">
     <property name="geometry">
      <rect>
-      <x>640</x>
+      <x>600</x>
       <y>60</y>
-      <width>281</width>
+      <width>221</width>
       <height>161</height>
      </rect>
     </property>
@@ -3687,13 +3697,6 @@
       <widget class="QPushButton" name="pushButton_3">
        <property name="text">
         <string>Cargar Jugadores</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="label_257">
-       <property name="text">
-        <string>Eliminar</string>
        </property>
       </widget>
      </item>
@@ -3714,7 +3717,27 @@
        </property>
       </widget>
      </item>
+     <item row="1" column="0" colspan="2">
+      <widget class="QLabel" name="label_257">
+       <property name="text">
+        <string>- Eliminar -</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
     </layout>
+   </widget>
+   <widget class="QPlainTextEdit" name="plainTextEdit">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>60</y>
+      <width>281</width>
+      <height>161</height>
+     </rect>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -3726,6 +3749,16 @@
      <height>22</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuReportes">
+    <property name="title">
+     <string>Reportes</string>
+    </property>
+    <addaction name="actionNivel_0"/>
+    <addaction name="actionNivel_1"/>
+    <addaction name="actionNivel_2"/>
+    <addaction name="actionJugadores"/>
+   </widget>
+   <addaction name="menuReportes"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -3736,6 +3769,26 @@
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionNivel_0">
+   <property name="text">
+    <string>Nivel 0</string>
+   </property>
+  </action>
+  <action name="actionNivel_1">
+   <property name="text">
+    <string>Nivel 1</string>
+   </property>
+  </action>
+  <action name="actionNivel_2">
+   <property name="text">
+    <string>Nivel 2</string>
+   </property>
+  </action>
+  <action name="actionJugadores">
+   <property name="text">
+    <string>Jugadores</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>

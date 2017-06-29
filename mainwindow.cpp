@@ -1,9 +1,18 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <backend.h>
+#include <stdio.h>
+#include <string.h>
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <cstring>
 
+int turn = 0;
 QLabel *nivel0[8][8], *nivel1[8][8], *nivel2[8][8];
-
+Matriz * tablero;
+Arbol * jugadores;
+aNodo * player1, * player2;
 backend *back_end;
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -47,6 +56,9 @@ MainWindow::MainWindow(QWidget *parent) :
             nivel2[i][j] = nivel_2[i][j];
         }
     }
+
+    tablero = new Matriz();
+    jugadores = new Arbol();
     updateNivel(0);
     updateNivel(1);
     updateNivel(2);
@@ -59,10 +71,18 @@ MainWindow::~MainWindow()
 
 void MainWindow::updateNivel(int nivel)
 {
-    Matriz * tablero = new Matriz();
+
     Encabezado * eFila = tablero->eFilas->primero;
     QPixmap tmp;
     Nodo *tmp1;
+
+    for (int i = 0; i < 8; ++i) {
+        for (int j = 0; j < 8; ++j) {
+            if(nivel == 0) nivel0[i][j]->clear();
+            if(nivel == 1) nivel1[i][j]->clear();
+            if(nivel == 2) nivel2[i][j]->clear();
+        }
+    }
 
     while(eFila != NULL)
     {
@@ -70,17 +90,19 @@ void MainWindow::updateNivel(int nivel)
         while(actual != NULL)
         {
             if(nivel == 0){
-                tmp = back_end->getPieza(actual->valor, actual->color);
-                nivel0[actual->fila -1][actual->columna -1]->setPixmap(tmp);
+                if(actual->isDrawable) {
+                    tmp = back_end->getPieza(actual->valor, actual->color);
+                    nivel0[actual->fila -1][actual->columna -1]->setPixmap(tmp);
+                }
             }else{
                 tmp1 = actual;
 
                 while (tmp1 != NULL) {
 
                     if(tmp1->nivel == nivel){
-                        tmp = back_end->getPieza(actual->valor, actual->color);
-                        if(nivel == 1) nivel1[actual->fila -1][actual->columna -1]->setPixmap(tmp);
-                        if(nivel == 2) nivel2[actual->fila -1][actual->columna -1]->setPixmap(tmp);
+                        tmp = back_end->getPieza(tmp1->valor, tmp1->color);
+                        if(nivel == 1) nivel1[tmp1->fila -1][tmp1->columna -1]->setPixmap(tmp);
+                        if(nivel == 2) nivel2[tmp1->fila -1][tmp1->columna -1]->setPixmap(tmp);
                     }
 
                     tmp1 = tmp1->enfrente;
@@ -92,4 +114,103 @@ void MainWindow::updateNivel(int nivel)
 
         eFila = eFila->siguiente;
     }
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    std::string tmp = ui->lineEdit_4->text().toStdString();
+    if(tmp.length() > 0){
+        std::vector<std::string> move = back_end->explode(tmp, '-');
+        tablero->mover(move, turn);
+        updateNivel(0);
+        updateNivel(1);
+        updateNivel(2);
+        if(turn == 0){
+            turn = 1;
+            ui->label_254->setText(player2->info);
+        }else{
+            turn = 0;
+            ui->label_254->setText(player1->info);
+        }
+    }
+    ui->plainTextEdit->appendPlainText(ui->lineEdit_4->text());
+}
+
+void MainWindow::on_actionNivel_0_triggered()
+{
+    tablero->graficar(0);
+    system("xdg-open matriz.png");
+}
+
+void MainWindow::on_actionNivel_1_triggered()
+{
+    tablero->graficar(1);
+    system("xdg-open matriz.png");
+}
+
+void MainWindow::on_actionNivel_2_triggered()
+{
+    tablero->graficar(2);
+    system("xdg-open matriz.png");
+}
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    std::ifstream file("../res/jugadores.txt");
+    std::vector<std::string> segmentos;
+    std::string line;
+
+    while (std::getline(file, line, '\n')){
+        line.pop_back();
+        segmentos = back_end->explode(line, '_');
+
+        char *cstr = new char[segmentos[0].length() + 1];
+        strcpy(cstr, segmentos[0].c_str());
+
+        jugadores->insertar(cstr, std::stoi(segmentos[1]), std::stoi(segmentos[2]));
+    }
+
+    ui->pushButton->setEnabled(true);
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    std::string j1 = ui->lineEdit_2->text().toStdString();
+    std::string j2 = ui->lineEdit_3->text().toStdString();
+
+    char *p1 = new char[j1.length() + 1];
+    strcpy(p1, j1.c_str());
+    char *p2 = new char[j2.length() + 1];
+    strcpy(p2, j2.c_str());
+
+    player1 = jugadores->buscar(p1);
+    if(player1 == NULL){
+        jugadores->insertar(p1, 0, 0);
+        player1 = jugadores->buscar(p1);
+    }
+
+    player2 = jugadores->buscar(p2);
+    if(player2 == NULL){
+        jugadores->insertar(p2, 0, 0);
+        player2 = jugadores->buscar(p2);
+    }
+
+    ui->label_254->setText(player1->info);
+    ui->lineEdit_4->setEnabled(true);
+    ui->pushButton_2->setEnabled(true);
+}
+
+void MainWindow::on_actionJugadores_triggered()
+{
+    jugadores->preOrden();
+    system("xdg-open arbol.png");
+}
+
+void MainWindow::on_pushButton_4_clicked()
+{
+    std::string tmp = ui->lineEdit_5->text().toStdString();
+    char *player = new char[tmp.length() +1];
+    strcmp(player, tmp.c_str());
+
+    jugadores->eliminar(player);
 }
